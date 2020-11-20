@@ -25,6 +25,9 @@ public class Utilisateur {
         this.listeTheme = new ArrayList<Theme>();
 
     }
+    public Utilisateur() {
+
+    }
 
     public int getIdUtilisateur() {
         return idUtilisateur;

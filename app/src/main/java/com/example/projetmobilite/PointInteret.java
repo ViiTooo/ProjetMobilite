@@ -1,6 +1,7 @@
 package com.example.projetmobilite;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class PointInteret {
@@ -11,7 +12,10 @@ public class PointInteret {
     private String url;
     private int coordoneesGPS;
     private List<Theme> listeTheme;
-    private List<Utilisateur> listeUtilisateur;
+
+
+
+    private HashMap<Utilisateur, String> listeUtilisateur;
 
     public PointInteret(int idPointInteret, String nomPoint, String description, String url, int coordoneesGPS,List<Theme> listeTheme) {
         this.idPointInteret = idPointInteret;
@@ -20,7 +24,7 @@ public class PointInteret {
         this.url = url;
         this.coordoneesGPS = coordoneesGPS;
         this.listeTheme = listeTheme;
-        this.listeUtilisateur = new ArrayList<Utilisateur>();
+        this.listeUtilisateur =  new HashMap<Utilisateur, String>();
     }
 
     public int getIdPointInteret() {
@@ -61,5 +65,9 @@ public class PointInteret {
 
     public void setCoordoneesGPS(int coordoneesGPS) {
         this.coordoneesGPS = coordoneesGPS;
+    }
+
+    public HashMap<Utilisateur, String> getListeUtilisateur() {
+        return listeUtilisateur;
     }
 }

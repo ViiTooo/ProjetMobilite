@@ -7,9 +7,29 @@ public class GestionUtilisateur {
     private Utilisateur utilisateur;
     private List<Utilisateur> listeUtilisateur;
 
+
+
     public GestionUtilisateur() {
 
     }
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public List<Utilisateur> getListeUtilisateur() {
+        return listeUtilisateur;
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
+    }
+
+    public void setListeUtilisateur(List<Utilisateur> listeUtilisateur) {
+        this.listeUtilisateur = listeUtilisateur;
+    }
+
+
 
     public List<Theme> listerThemeUtilisateur(){
        return this.utilisateur.getListeTheme();
